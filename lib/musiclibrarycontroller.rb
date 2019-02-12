@@ -39,7 +39,16 @@ class MusicLibraryController
   end
   
   def list_songs 
-    
+    counter = 1 
+    names = []
+    Song.all.collect do |song| 
+    names << song.name
+    counter += 1 
   end
+  names.sort 
+  names.each do |name|
+    puts "#{counter}. #{name}"
+  end
+end 
   
 end
