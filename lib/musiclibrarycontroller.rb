@@ -56,7 +56,7 @@ def list_songs_by_artist
   
   input = gets.strip 
   
-  
+  input.list_songs 
   
 end
 
