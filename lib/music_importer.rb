@@ -1,12 +1,12 @@
 class MusicImporter
-  attr_accessor :filepath
+  attr_accessor :path
   
-  def initialize(filepath)
-    @filepath = filepath
+  def initialize(path)
+    @path = path
   end
   
    def files
-   Dir.chdir(@filepath) do | filepath |
+   Dir.chdir(@path) do | path |
         Dir.glob("*.mp3")
   end
 end
