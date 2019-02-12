@@ -76,7 +76,7 @@ def list_songs_by_artist
     puts "Which song number would you like to play?" 
     list_songs
     input = gets.strip 
-    
+    puts 
   end
 
 end
