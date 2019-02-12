@@ -52,9 +52,10 @@ def self.find_or_create_by_name(name)
 end
 
 def self.new_from_filename(file)
-  person = file[0]
-  song = file[1]
-  self.new(song, person)
+  array = file.split(" - ")
+  name = array[0]
+  artist = array[1]
+  self.new(name, artist)
   
 end
   
