@@ -5,7 +5,15 @@ class MusicImporter
     @filepath = filepath
   end
   
+   def files
+   Dir.chdir(@path) do | path |
+        Dir.glob("*.mp3")
+  end
+end
   
+  def import
+    files.each { |file| Song.new_by_filename(file) }
+  end
   
   
   def files 
