@@ -72,5 +72,9 @@ def list_songs_by_artist
     end
   end
   
+  def play_song
+    puts "choose" 
+    list_songs
+  end
 
 end
