@@ -74,9 +74,14 @@ def list_songs_by_artist
   
   def play_song
     puts "Which song number would you like to play?" 
-    songlist= list_songs
     input = gets.strip.to_i
     
+    if input.between?(1,Song.all.length)
+      song = Song.all.sort {|a, b| a.name <=> b.name}[input - 1]
+      puts "Playing #{song.name} by #{song.artist.name}"
+    else
+      nil
+    end
   end
 
 end
