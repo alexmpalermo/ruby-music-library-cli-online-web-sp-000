@@ -5,6 +5,9 @@ class MusicImporter
     @filepath = filepath
   end
   
+  
+  
+  
   def files 
     @files = [] 
     @files << filenames
