@@ -52,8 +52,8 @@ def self.find_or_create_by_name(name)
 end
 
 def self.new_from_filename(file)
-  person = file[1]
-  song = file[0]
+  person = file[0]
+  song = file[1]
   self.new(song, person)
   
 end
