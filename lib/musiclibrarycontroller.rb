@@ -75,7 +75,7 @@ def list_songs_by_artist
   def play_song
     puts "Which song number would you like to play?" 
     songlist= list_songs
-    input = gets.strip 
+    input = gets.strip_to_i
     songlist.select {|song| song.index == input}
     puts "Playing #{song.name} by #{song.artist.name}"
   end
