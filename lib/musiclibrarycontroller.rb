@@ -46,7 +46,9 @@ def list_artists
    Artist.all.sort {|a, b| a.name <=> b.name}.each.with_index(1) {|artist, index| puts "#{index}. #{artist.name}"}
  end 
  
- 
+ def list_genres
+   
+ end
 
 
 end
