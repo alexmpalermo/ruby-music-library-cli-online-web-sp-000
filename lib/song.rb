@@ -53,8 +53,8 @@ end
 
 def self.new_from_filename(file)
  song = Song.new(file.split(" - ")[1])
- song.artist = 
- song.genre = 
+ song.artist = Artist.find_or_create_by_name(file.split(" - ")[0])
+ song.genre = Genre.find_or_create_by_name(file.split)
   
 end
   
