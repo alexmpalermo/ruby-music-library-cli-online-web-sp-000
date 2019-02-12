@@ -73,7 +73,7 @@ def list_songs_by_artist
   end
   
   def play_song
-    puts "choose" 
+    puts "Which song number would you like to play?" 
     list_songs
   end
 
