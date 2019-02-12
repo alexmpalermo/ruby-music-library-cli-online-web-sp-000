@@ -39,15 +39,13 @@ class MusicLibraryController
   end
   
   def list_songs 
-    counter = 1 
     names = []
     Song.all.collect do |song| 
     names << song.name
-    counter += 1 
   end
   names.sort 
-  names.each do |name|
-    puts "#{counter}. #{name}"
+  names.each_with_index do |name, index|
+    puts "#{index+1}. #{name}"
   end
 end 
   
